@@ -6,6 +6,7 @@ Square Class: Printing a square with # and coordinates
 
 class Square:
     """ class Square that defines a square """
+
     def __init__(self, size=0, position=(0, 0)):
         """ Initialize attributes"""
         self.size = size
@@ -37,13 +38,13 @@ class Square:
         if type(value) is not tuple:
             raise TypeError(s)
         elif (len(value) != 2):
-                raise TypeError(s)
+            raise TypeError(s)
         else:
             for t in value:
                 if (t < 0):
                     raise TypeError(s)
                 elif (type(t) is not int):
-                    raise TypeError(S)
+                    raise TypeError(s)
         self.__position = value
 
     def area(self):
