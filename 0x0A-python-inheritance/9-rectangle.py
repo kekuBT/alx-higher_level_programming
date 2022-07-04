@@ -4,6 +4,7 @@
 
 class BaseGeometry:
     """ class that improve geometry with integer validator"""
+
     def area(self):
         """ raises an Exception with the message area() is not implemented """
         raise Exception("area() is not implemented")
@@ -15,11 +16,13 @@ class BaseGeometry:
         if (value <= 0):
             raise ValueError(name + " must be greater than 0")
 
+
 """ Program that build a full rectangle """
 
 
 class Rectangle(BaseGeometry):
     """ class Rectangle that inherits from BaseGeometry """
+
     def __init__(self, width, height):
         """ Constructor """
         self.__width = width
