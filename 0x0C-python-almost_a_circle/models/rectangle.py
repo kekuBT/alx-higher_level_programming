@@ -116,4 +116,5 @@ class Rectangle(Base):
             'x': self.x,
             'y': self.y
         }
+        """ All the necessary representation in the dictionary """
         return (my_dict)
