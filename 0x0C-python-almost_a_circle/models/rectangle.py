@@ -86,13 +86,18 @@ class Rectangle(Base):
 
     def __str__(self):
         """ overriding the __str__ method to return something else """
-        ovrstr = "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id,
-                                                                   self.x, self.y, self.width, self.height)
+        ovrstr = "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"\
+            .format(self.id, self.x, self.y, self.width, self.height)
         return ovrstr
 
     def update(self, *args, **kwargs):
-        """ Method that assigns an argument to each attribute
-        by Non-keyword and key/value"""
+        """
+            assigns key/value argument to attributes
+            kwargs is skipped if args is not empty
+            Args:
+                *args -  variable number of no-keyword args
+                **kwargs - variable number of keyworded args
+        """
         arlist = ["id", "width", "height", "x", "y"]
         if (args and len(args) != 0):
             for arl in range(len(args)):

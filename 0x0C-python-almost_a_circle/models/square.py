@@ -22,8 +22,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """ overriding the __str__ method that returns a custom string """
-        ovrstr = "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id,
-                                                           self.x, self.y, self.width)
+        ovrstr = "[Square] ({:d}) {:d}/{:d} - {:d}"\
+            .format(self.id, self.x, self.y, self.width)
         return (ovrstr)
 
     def update(self, *args, **kwargs):
