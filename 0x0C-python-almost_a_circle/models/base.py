@@ -66,8 +66,8 @@ class Base:
             with open(fname, 'r') as f:
                 stread = f.read()
                 listjson = cls.from_json_string(stread)
-                for l in listjson:
-                    my_list.append(cls.create(**l))
+                for lay in listjson:
+                    my_list.append(cls.create(**lay))
         return (my_list)
 
     @classmethod
