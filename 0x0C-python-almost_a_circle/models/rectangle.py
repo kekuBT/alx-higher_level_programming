@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" First Rectangle that inherits from Base """
 from . base import Base
 import json
 
