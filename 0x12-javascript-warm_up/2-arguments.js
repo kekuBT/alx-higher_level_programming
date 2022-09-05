@@ -1,11 +1,10 @@
 #!/usr/bin/node
-// script that prints x times “C is fun”
-const arg = process.argv.slice(2);
-const argInt = parseInt(arg[0]);
-if (isNaN(argInt)) {
-    console.log('Missing number of occurrences');
+// cript that prints a message depending of the number of arguments passed
+const args = process.argv;
+if (args.length === 2) {
+    console.log('No argument');
+} else if (args.length === 1) {
+    console.log('Argument found');
 } else {
-    for (let i = 0; i < argInt; i++) {
-        console.log('C is fun');
-    }
+    console.log('Arguments found');
 }
